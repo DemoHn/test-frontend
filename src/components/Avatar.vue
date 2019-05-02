@@ -19,6 +19,7 @@ export default {
     size: {
       type: Number,
       default: 100,
+      required: false,
     },
     source: {
       type: String,
