@@ -1,6 +1,6 @@
 <template>
   <div>
-    <default-layout title="Name 01">
+    <default-layout title="Your Friend">
       <p>Friend Detail {{ id }}</p>
     </default-layout>
   </div>
