@@ -6,7 +6,7 @@
           v-show="showBack"
           class="back-button"
         >
-          <router-link to="/foo">
+          <router-link :to="backLink">
             <img
               :src="backImage"
               class="back-image"
@@ -97,6 +97,7 @@ div.navbar span.title .title-text {
 div.content {
   position: relative;
   margin-top: 3rem;
+  padding-top: 0.5rem;
 }
 </style>
 

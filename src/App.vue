@@ -29,7 +29,8 @@ export default {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#app {
-  height: 100vh;  
+a {
+  text-decoration: none;
 }
+
 </style>

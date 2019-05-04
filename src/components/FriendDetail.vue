@@ -19,9 +19,13 @@
     </div>
     <div class="col">
       <span class="label">Location:</span>
-      <span class="item" v-if="!validLocation">Invalid</span>
+      <span
+        v-if="!validLocation"
+        class="item"
+      >&lt;Invalid&gt;</span>
     </div>
-    <map-marker v-if="validLocation"
+    <map-marker
+      v-if="validLocation"
       :latitude="mapLat"
       :longitude="mapLng"
     />
@@ -57,7 +61,7 @@ export default {
       required: false
     },
     location: {
-      type: Object,
+      type: Array,
       required: true,
       default: function() {
         return [0.0, 0.0]
@@ -67,7 +71,6 @@ export default {
   data() {
     return {
       avatarSize,
-      validLocation: true,
     }
   },
   computed: {
@@ -77,7 +80,7 @@ export default {
     mapLat() {
       return this.location[1]
     },
-    validLocation() {
+    validLocation() {      
       return !_.isNil(this.location[0]) && !_.isNil(this.location[1])
     }
   }

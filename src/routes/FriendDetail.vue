@@ -1,6 +1,10 @@
 <template>
   <div>
-    <default-layout title="Your Friend">
+    <default-layout
+      title="Your Friend"
+      :show-back="true"
+      back-link="/"
+    >
       <div v-if="loading">
         <div class="loading-container">
           <loading />

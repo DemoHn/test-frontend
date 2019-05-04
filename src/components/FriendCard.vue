@@ -61,7 +61,7 @@ div.container div.card {
 
 div.card span.label {
   display: inline-block;
-  margin-left: 1rem;
+  margin-left: 1rem;  
 }
 
 div.card span.label .label-text {

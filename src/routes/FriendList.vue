@@ -7,13 +7,17 @@
         </div>
       </div>
       <!-- load friends card -->
-      <div v-else>      
-        <friend-card
+      <div v-else>
+        <router-link
           v-for="friend in friendsList"
           :key="friend.id"
-          :avatar="friend.avatar"
-          :name="friend.name"
-        />      
+          :to="'detail/' + friend.id"
+        >
+          <friend-card
+            :avatar="friend.avatar"
+            :name="friend.name"
+          />
+        </router-link>
       </div>
     </default-layout>
   </div>
@@ -36,14 +40,10 @@ export default {
       friendsList: []
     }
   },
-  async mounted() {
-    try {
+  async mounted() {    
       const data = await fetchFriends()
       this.friendsList = data
       this.loading = false
-    } catch (error) {
-      // TODO: handle errors with modal 
-    }
   }
 }
 </script>
