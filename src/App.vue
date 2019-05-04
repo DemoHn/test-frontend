@@ -26,12 +26,10 @@ export default {
 * {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #app {
   height: 100vh;  
 }
 </style>
-
-
