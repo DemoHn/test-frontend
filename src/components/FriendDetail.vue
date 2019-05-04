@@ -19,9 +19,9 @@
     </div>
     <div class="col">
       <span class="label">Location:</span>
-      <span class="item" />
+      <span class="item" v-if="!validLocation">Invalid</span>
     </div>
-    <map-marker
+    <map-marker v-if="validLocation"
       :latitude="mapLat"
       :longitude="mapLng"
     />
@@ -29,8 +29,9 @@
 </template>
 
 <script>
-import MapMarker from './MapMarker.vue'
-import Avatar from './Avatar.vue'
+import MapMarker from './MapMarker.vue';
+import Avatar from './Avatar.vue';
+import _ from 'lodash';
 
 const avatarSize = 80
 
@@ -66,6 +67,7 @@ export default {
   data() {
     return {
       avatarSize,
+      validLocation: true,
     }
   },
   computed: {
@@ -74,6 +76,9 @@ export default {
     },
     mapLat() {
       return this.location[1]
+    },
+    validLocation() {
+      return !_.isNil(this.location[0]) && !_.isNil(this.location[1])
     }
   }
 }

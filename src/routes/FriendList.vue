@@ -25,13 +25,6 @@ import Loading from '../components/Loading.vue';
 
 import { fetchFriends } from '../services/friends';
 
-const transformFriendsData = (rawArray) =>
-  rawArray.map(item => ({
-    id: item._id,
-    avatar: item.picture,
-    name: `${item.name.first} ${item.name.last}`
-  }))
-
 export default {
   components: {
     'friend-card': FriendCard,
@@ -45,8 +38,8 @@ export default {
   },
   async mounted() {
     try {
-      const { data } = await fetchFriends()
-      this.friendsList = transformFriendsData(data)
+      const data = await fetchFriends()
+      this.friendsList = data
       this.loading = false
     } catch (error) {
       // TODO: handle errors with modal 

@@ -32,7 +32,7 @@ export default {
       // just show the location, move, touch is not allowed
       interactive: false,
       center: lngLatTuple,
-      zoom: 8,
+      zoom: 3,
       style: 'mapbox://styles/mapbox/streets-v9'
     });
 
