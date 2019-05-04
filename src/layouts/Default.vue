@@ -98,6 +98,9 @@ div.content {
   position: relative;
   margin-top: 3rem;
   padding-top: 0.5rem;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
 
