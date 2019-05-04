@@ -7,7 +7,11 @@
 </template>
 
 <script>
+import FriendDetail from '../components/FriendDetail'
 export default {
+  components: {
+    'friend-detail': FriendDetail
+  },
   computed: {
     id: function() {
       return this.$route.params.id

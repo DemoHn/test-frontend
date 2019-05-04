@@ -6,7 +6,12 @@
           v-show="showBack"
           class="back-button"
         >
-          <router-link to="/foo">BACK</router-link>
+          <router-link to="/foo">
+            <img
+              :src="backImage"
+              class="back-image"
+            >
+          </router-link>
         </span>
       </span>
       <span class="title">
@@ -23,6 +28,7 @@
 </template>
 
 <script>
+import backImage from '../assets/back.svg'
 export default {
   props: {
     title: {
@@ -32,12 +38,17 @@ export default {
     showBack: {
       type: Boolean,
       required: false,
-      default: true
+      default: false
     },
     backLink: {
       type: String,
       required: false,
       default: ''
+    }
+  },
+  data() {
+    return {
+      backImage
     }
   }
 }
@@ -58,17 +69,22 @@ div.navbar {
 }
 
 div.navbar span.back {
-  flex-basis: 15%;
+  flex-basis: 8%;
   text-align: center;
+}
+
+.back-image {
+  height: 1rem;
+  color: #222;
 }
 
 /* reserved for alignment and Forward button in the future */
 div.navbar span.forward {  
-  flex-basis: 15%;
+  flex-basis: 8%;
 }
 
 div.navbar span.title {  
-  flex-basis: 70%;
+  flex-basis: 84%;
   text-align: center;
 }
 

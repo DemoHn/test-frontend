@@ -9,7 +9,7 @@
         email="hello@gmail.com"
         :location="loc"
       />
-    </default-layout>    
+    </default-layout>
   </div>
 </template>
 

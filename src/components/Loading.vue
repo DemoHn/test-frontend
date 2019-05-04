@@ -1,7 +1,12 @@
 <template>
   <div class="container">
     <!-- icon column -->
-    <div class="col" />
+    <div class="col">
+      <img
+        :src="loaderImage"
+        class="loader-image"
+      >
+    </div>
     <!-- text column -->
     <div class="col">
       <span class="text">Loading...</span>
@@ -10,8 +15,14 @@
 </template>
 
 <script>
+import loaderImage from '../assets/loader.svg';
+
 export default {
-  
+  data() {
+    return {
+      loaderImage
+    }
+  }  
 }
 </script>
 
@@ -23,6 +34,10 @@ div.container {
 
 div.col {
   text-align: center;
+}
+
+.loader-image {
+  width: 40px;
 }
 
 .text {
