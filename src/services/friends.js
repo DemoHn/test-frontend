@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const defaultURL = 'https://next.json-generator.com/api/json/get/41P1_UhSI'
 
 export async function fetchFriends(friendsURL = defaultURL) {

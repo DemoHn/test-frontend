@@ -51,10 +51,10 @@ div.container {
 div.container div.card {
   border: 1px solid #cecece;
   border-radius: 3px;
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.25rem;
   width: 100%;
-  background-color: #fafbff;  
+  background-color: #f2f2f254;  
   display: flex;
   align-items: center;
 }
@@ -65,7 +65,7 @@ div.card span.label {
 }
 
 div.card span.label .label-text {
-  font-size: 20px;
-  color: #3b3b3b; 
+  font-size: 18px;
+  color: #4b4b4b; 
 }
 </style>
