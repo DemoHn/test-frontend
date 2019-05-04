@@ -3,7 +3,10 @@
     <div class="col">
       <span class="label">Avatar:</span>
       <span class="item">
-        <avatar />
+        <avatar
+          :size="avatarSize"
+          :source="avatar"
+        />
       </span>
     </div>
     <div class="col">
@@ -29,12 +32,19 @@
 import MapMarker from './MapMarker.vue'
 import Avatar from './Avatar.vue'
 
+const avatarSize = 80
+
 export default {
   components: {
     'map-marker': MapMarker,
     'avatar': Avatar,
   },
   props: {
+    avatar: {
+      type: String,
+      default: '',
+      required: false
+    },
     name: {
       type: String,
       default: '',
@@ -51,6 +61,11 @@ export default {
       default: function() {
         return [0.0, 0.0]
       }
+    }
+  },
+  data() {
+    return {
+      avatarSize,
     }
   },
   computed: {

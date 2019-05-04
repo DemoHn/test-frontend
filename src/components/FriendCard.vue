@@ -54,7 +54,7 @@ div.container div.card {
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   width: 100%;
-
+  background-color: #fafbff;  
   display: flex;
   align-items: center;
 }
