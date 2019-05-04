@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar-wrapper">
+  <span class="container">
     <div
       class="avatar"
       :style="avatarStyle"
@@ -10,7 +10,7 @@
         class="avatar-img"
       >
     </div>
-  </div>
+  </span>
 </template>
 
 <script>
@@ -42,6 +42,10 @@ export default {
 </script>
 
 <style scoped>
+div.container {
+  display: inline-block;
+}
+
 div.avatar {
   border-radius: 50%;
   position: relative;

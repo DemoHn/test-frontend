@@ -2,33 +2,29 @@
   <div>
     <default-layout title="All Friends">
       <!-- test avatar -->
-      <avatar
-        :size="size"
-        source="http://placehold.it/100x200"
+      <friend-card name="Louis Desautomajeker" />
+      <friend-detail 
+        name="Louis Desautojajeker"
+        email="hello@gmail.com"
+        :location="loc"
       />
-      <map-marker />
-      <friend-card name="Loz" />
-      <friend-detail />
     </default-layout>    
   </div>
 </template>
 
 <script>
-import Avatar from '../components/Avatar.vue';
-import MapMarker from '../components/MapMarker.vue';
 import FriendCard from '../components/FriendCard.vue';
 import FriendDetail from '../components/FriendDetail.vue';
 
 export default {
-  components: {
-    'avatar': Avatar,
-    'map-marker': MapMarker,
+  components: {    
     'friend-card': FriendCard,
     'friend-detail': FriendDetail,
   },
   data() {
     return {
-      size: 80
+      size: 80,
+      loc: [1,2]
     }
   }
 }

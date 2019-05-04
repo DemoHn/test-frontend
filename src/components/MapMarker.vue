@@ -15,12 +15,14 @@ mapboxgl.accessToken = publicToken;
 export default {
   props: {
     latitude: {
-      type: String,
-      default: '0.0',
+      type: Number,
+      required: true,
+      default: 0.0
     },
     longitude: {
-      type: String,
-      default: '120.0',
+      type: Number,
+      required: true,
+      default: 120.0
     }
   },
   mounted() {
@@ -41,7 +43,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 div.container {
   width: 100%;
   /* hardcore height first, may update in responed to further requirement */

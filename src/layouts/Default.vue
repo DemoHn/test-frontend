@@ -75,7 +75,7 @@ div.navbar span.title {
 div.navbar span.title .title-text {
   color: firebrick;
   font-size: 18px;
-
+  font-weight: bold;
 }
 
 div.content {
