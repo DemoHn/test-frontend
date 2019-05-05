@@ -37,7 +37,7 @@ import MapMarker from './MapMarker.vue';
 import Avatar from './Avatar.vue';
 import _ from 'lodash';
 
-const avatarSize = 80
+const avatarSize = 80;
 
 export default {
   components: {

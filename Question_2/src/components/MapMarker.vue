@@ -8,7 +8,7 @@
 <script>
 import mapboxgl from 'mapbox-gl';
 
-const publicToken = 'pk.eyJ1Ijoibmlnc2hveGl6IiwiYSI6ImNqdjZ1YnB4eDAwMHA0NG83amE0NXNuNncifQ.SNHdD85i-HbkdtIuZENGMw'
+const publicToken = process.env.VUE_APP_MAPBOX_TOKEN;
  
 mapboxgl.accessToken = publicToken;
 
